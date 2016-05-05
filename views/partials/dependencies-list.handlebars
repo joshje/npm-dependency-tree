@@ -1,0 +1,8 @@
+<ul class="dependencies">
+	{{#each dependencies}}
+	<li class="dependencies--dependency">
+		<p class="dependencies--dependency--name">{{@key}} ({{this}})</p>
+		<div class="dependencies--dependency--children" data-dependencies-for="{{@key}}">Loading</div>
+	</li>
+	{{/each}}
+</ul>

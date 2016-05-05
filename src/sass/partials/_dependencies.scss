@@ -1,0 +1,32 @@
+.dependencies {
+	list-style: none;
+	padding: 0;
+	border-left: 1px solid #DDD;
+
+	&--dependency {
+		&--name {
+			position: relative;
+			margin: 0;
+			padding: 10px;
+			background: #DDD;
+		}
+
+		&:hover > &--name {
+			background: #CCC;
+		}
+
+		&--children {
+			padding: 10px 0 10px 10px;
+		}
+
+		&--children &--name:before {
+			content: '';
+			width: 12px;
+			height: 1px;
+			position: absolute;
+			left: -12px;
+			top: 20px;
+			background: #DDD;
+		}
+	}
+}

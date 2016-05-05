@@ -1,0 +1,51 @@
+.header {
+	background: $color-main-dark;
+	color: $color-plain-light;
+	padding: 10px;
+	text-align: center;
+	overflow: hidden;
+
+	&--title {
+		font-size: 1.5rem;
+		margin: 10px;
+	}
+
+	&--search {
+		margin: 10px;
+
+		&--input {
+			padding: 5px;
+			font-size: 1.2rem;
+			background: $color-plain-dark;
+			border: 1px solid $color-main-light;	
+		}
+
+		&--button {
+			font-size: 1.2rem;
+			padding: 5px 10px;
+			color: $color-plain-light;
+			background: $color-contrast-dark;
+			border: 1px solid $color-contrast-dark;
+			border-radius: 0.25em;
+
+			&:hover {
+				background: $color-contrast-light;
+			}
+		}
+	}
+
+	@include media(">=600px") {
+
+		text-align: left;
+
+		&--title {
+			float: left;
+			font-size: 1.75em;
+		}
+
+		&--search {
+			float: right;
+		}
+	}
+
+}

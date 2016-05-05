@@ -1,0 +1,20 @@
+<header class="header">
+	<div class="header--title">Dependencies</div>
+
+	<form class="header--search" method="GET">
+		<input class="header--search--input" name="package" type="text" value="{{package}}">
+		<button class="header--search--button">Find dependencies</button>
+	</form>
+</header>
+
+<main>
+
+{{#if package}}
+
+<h1>Dependencies for <span class="highlight">{{package}}</span></h1>
+
+<div data-component="npmDependencies" data-package="{{package}}"></div>
+
+{{/if}}
+
+</main>
