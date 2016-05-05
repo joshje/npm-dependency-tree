@@ -1,7 +1,7 @@
 .dependencies {
 	list-style: none;
 	padding: 0;
-	border-left: 1px solid #DDD;
+	border-left: 1px solid $color-plain-mid;
 
 	&--dependency {
 		&--name {
@@ -22,7 +22,7 @@
 			position: absolute;
 			left: -12px;
 			top: 20px;
-			background: #DDD;
+			background: $color-plain-mid;
 		}
 
 		&__has-children > &--name {
@@ -30,7 +30,7 @@
 		}
 
 		&__has-children:hover > &--name {
-			background: #CCC;
+			background: $color-plain-dark;
 		}
 
 		&__has-children > &--name:after {
@@ -43,7 +43,7 @@
 			padding-bottom: 2px;
 			text-align: center;
 			color: $color-main-light;
-			background: $color-plain-light;
+			background: $color-plain;
 			border-radius: 100%;
 			content: '-';
 		}

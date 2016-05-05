@@ -1,6 +1,6 @@
 .header {
 	background: $color-main-dark;
-	color: $color-plain-light;
+	color: $color-plain;
 	padding: 10px;
 	text-align: center;
 	overflow: hidden;
@@ -16,7 +16,7 @@
 		&--input {
 			padding: 5px;
 			font-size: 1.2rem;
-			background: $color-plain-dark;
+			background: $color-plain;
 			border: 1px solid $color-main-light;
 			margin-bottom: 10px;
 			width: 100%;
@@ -31,7 +31,7 @@
 		&--button {
 			font-size: 1.2rem;
 			padding: 5px 10px;
-			color: $color-plain-light;
+			color: $color-plain;
 			background: $color-contrast-dark;
 			border: 1px solid $color-contrast-dark;
 			border-radius: 0.25em;
