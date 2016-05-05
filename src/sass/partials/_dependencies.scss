@@ -11,10 +11,6 @@
 			background: #DDD;
 		}
 
-		&:hover > &--name {
-			background: #CCC;
-		}
-
 		&--children {
 			padding: 10px 0 10px 10px;
 		}
@@ -27,6 +23,37 @@
 			left: -12px;
 			top: 20px;
 			background: #DDD;
+		}
+
+		&__has-children > &--name {
+			cursor: pointer;
+		}
+
+		&__has-children:hover > &--name {
+			background: #CCC;
+		}
+
+		&__has-children > &--name:after {
+			display: inline-block;
+			position: absolute;
+			right: 10px;
+			top: 8px;
+			line-height: 18px;
+			width: 20px;
+			padding-bottom: 2px;
+			text-align: center;
+			color: $color-main-light;
+			background: $color-plain-light;
+			border-radius: 100%;
+			content: '-';
+		}
+
+		&__hide-children > &--name:after {
+			content: '+';
+		}
+
+		&__hide-children > &--children {
+			display: none;
 		}
 	}
 }

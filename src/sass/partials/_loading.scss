@@ -1,0 +1,28 @@
+.loading {
+	&:before {
+		display: inline-block;
+		content: '';
+		width: 6px;
+		height: 6px;
+		margin: 0 6px;
+		vertical-align: middle;
+		background: $color-main-dark;
+		border-radius: 100%;
+
+		animation-duration: 1s;
+	  animation-name: loading;
+	  animation-iteration-count: infinite;
+	}
+}
+
+@keyframes loading {
+  from {
+  	opacity: 0.25;
+  	transform: scale(0.25);
+  }
+
+  to {
+  	opacity: 1;
+  	transform: scale(1);
+  }
+}

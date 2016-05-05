@@ -17,7 +17,15 @@
 			padding: 5px;
 			font-size: 1.2rem;
 			background: $color-plain-dark;
-			border: 1px solid $color-main-light;	
+			border: 1px solid $color-main-light;
+			margin-bottom: 10px;
+			width: 100%;
+			box-sizing: border-box;
+
+			@include media(">=500px") {
+				margin-bottom: 0;
+				width: auto;
+			}
 		}
 
 		&--button {

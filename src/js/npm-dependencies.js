@@ -1,5 +1,6 @@
 var ajax = require('ajax-promise');
 var _ = require('lodash');
+var delegate = require('delegate');
 
 var dependenciesTmpl = require('../../views/partials/dependencies-list.handlebars');
 var messageTmpl = require('../../views/partials/message.handlebars');
@@ -8,6 +9,10 @@ var packageCache = {};
 
 function renderDependencies(result) {
 	if (result.dependencies) {
+		if (this.parentNode.classList.contains('dependencies--dependency')) {
+			this.parentNode.classList.add('dependencies--dependency__has-children');
+		}
+
 		this.innerHTML = dependenciesTmpl(result);
 
 		_.forEach(result.dependencies, function(version, dependency) {
@@ -40,6 +45,10 @@ function init(el) {
 			});
 		}
 	});
+
+	delegate(el, '.dependencies--dependency--name', 'click', function(e) {
+	   e.delegateTarget.parentNode.classList.toggle('dependencies--dependency__hide-children');
+	}, false);
 }
 
 module.exports = {
