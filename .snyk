@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:jquery:20150627':
+    - ajax-promise > jquery:
+        reason: None given
+        expires: '2017-06-06T12:42:54.760Z'
+  'npm:jquery:20160529':
+    - ajax-promise > jquery:
+        reason: None given
+        expires: '2017-06-06T12:42:54.760Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:marked:20170112':
+    - gulp-notify > node-notifier > cli-usage > marked:
+        patched: '2017-05-07T12:42:54.819Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2017-05-07T12:42:54.819Z'
+    - gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2017-05-07T12:42:54.819Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-05-07T12:42:54.819Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2017-05-07T12:42:54.819Z'
