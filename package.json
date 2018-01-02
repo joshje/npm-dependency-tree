@@ -23,7 +23,7 @@
     "express-handlebars": "^3.0.0",
     "express-http-proxy": "^0.6.0",
     "fast-memory-cache": "^2.0.4",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
