@@ -4,7 +4,9 @@
   "description": "Generates a dependeny tree for any NPM module",
   "main": "app.js",
   "scripts": {
-    "start": "node node_modules/gulp/bin/gulp build && node app.js"
+    "start": "node node_modules/gulp/bin/gulp build && node app.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,7 @@
     "express-handlebars": "^3.0.0",
     "express-http-proxy": "^0.6.0",
     "fast-memory-cache": "^2.0.4",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
@@ -33,6 +35,8 @@
     "include-media": "^1.4.2",
     "lodash": "^4.11.2",
     "request": "^2.72.0",
-    "webpack-stream": "^3.2.0"
-  }
+    "webpack-stream": "^3.2.0",
+    "snyk": "^1.105.0"
+  },
+  "snyk": true
 }
